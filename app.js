@@ -22,7 +22,7 @@ app.get("/", (req, res) => {
 
 //Connect to DB
 mongoose.connect(
-  "mongodb+srv://duri:Duri123456@todo-ge95f.mongodb.net/dbtodo?retryWrites=true&w=majority",
+  process.env.DB_CONNECTION,
   { dbName: "dbtodo" },
   () => console.log("connected to db")
 );
